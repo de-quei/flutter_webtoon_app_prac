@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webtoon_app_prac/screens/home_screen.dart';
+import 'package:flutter_webtoon_app_prac/services/api_service.dart';
 
 void main() {
+  ApiService().getTodaysToons();
   runApp(const MainApp());
 }
 
@@ -11,9 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+        body: HomeScreen(),
       ),
     );
   }
